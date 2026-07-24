@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: wolfe-wave-scanner
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -u koyeb_scanner.py
+    envVars:
+      - key: DHAN_CLIENT_ID
+        value: "1104219000"
+      - key: DHAN_ACCESS_TOKEN
+        sync: false
+      - key: TELEGRAM_TOKEN
+        value: "8826992303:AAFTQZS35wSKlSj4Lf1r04Iwzik5nsLWMys"
+      - key: TELEGRAM_CHAT_ID
+        value: "5366704688"
